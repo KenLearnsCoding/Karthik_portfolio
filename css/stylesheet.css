@@ -1,0 +1,429 @@
+/* GDES306 | MMDD253 - Coding Your Portfolio     */
+/* Extra small devices (phones, less than 600px) */
+/* No media query since this is the default CSS */
+
+/* Import Montserrat font family with multiple weights */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Apply Montserrat font family to all headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif !important; /* Use !important to override existing font-family */
+    font-weight: 600; /* Adjust this value for the best weight */
+}
+
+/* Apply Montserrat font family with regular weight to paragraphs */
+p {
+    font-family: 'Montserrat', sans-serif !important; /* Use !important to override existing font-family */
+    font-weight: 400; /* Regular weight */
+}
+
+/* Other CSS rules from your code */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar {
+    background-color: #444;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #0ff; /* Change hover color to cyan */
+    color: black;
+}
+
+.main {
+    padding: 20px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Basic page styling */
+:root {
+    /* These are global variables that you can use in your CSS */
+    --black:black;
+    --dark-grey:#333;
+    --mid-grey:#666;
+    --light-grey:#999;
+    --white:white;
+    --accent-colour:cyan;
+    --hover-colour: #0ff; /* Define cyan color */
+    --headline-font:lust, serif;
+    --body-font:nunito-sans, sans-serif;
+    --horizontal-shift:6px;
+    --section-padding-top:120px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+}
+
+/*Scale all images to their parent container */
+img {
+    width:100%;
+}
+
+body {
+    font-family: var(--body-font);
+}
+
+/* Remove the existing font-family declarations for headers */
+/*
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headline-font);
+}
+*/
+
+/* Remove the existing font-family declarations for paragraphs */
+/*
+p {
+    font-family: var(--body-font);
+}
+*/
+
+h1 {
+    font-size: calc(40px + (72 - 40) * (100vw - 400px) / (1800 - 400));
+    margin-bottom: 3rem;
+}
+    
+h2 {
+    font-size: calc(32px + (48 - 32) * (100vw - 400px) / (1800 - 400));
+    margin-bottom: 1.5rem;
+}
+    
+h3 {
+    font-size: calc(20px + (28 - 20) * (100vw - 400px) / (1800 - 400));
+}
+    
+p {
+    font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1800 - 400));
+    margin-bottom:2rem;
+}
+
+a {
+    font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1800 - 400));
+    text-decoration: none;
+    color: var(--black);
+}
+    
+a:visited {
+    color: var(--black);
+}
+    
+.btn {
+    background-color: var(--black);
+    border: none;
+    color: var(--white);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1800 - 400));
+    width: fit-content;
+}
+    
+.btn:hover {
+    background-color: cyan;
+    color: var(--black);
+    padding-left: calc(32px + var(--horizontal-shift));
+}
+    
+.btn:visited {
+    color: var(--white);
+}
+.btn:hover:visited {
+    color: var(--black);
+}
+
+/* Styling the Navigation */
+header {
+position: fixed;
+width: 100%;
+z-index: 10;
+}
+
+nav {
+    overflow: hidden;
+    background: var(--white);
+    height: 70px;
+}
+
+.navexpanded {
+    height: 170px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+nav ul > li {
+    margin-top: 14px;
+    flex-basis: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--black);
+    margin: 20px;
+}
+nav ul li a:hover {
+    text-decoration: none;
+    color: var(--dark-grey);
+    background: var(--hover-colour); /* Change hover color to cyan */
+}
+
+#logo {
+    margin-right: auto;
+    flex-basis: 50%;
+    text-align: left;
+}
+
+#logo img {
+    height: 3rem;
+    width: auto;
+}
+
+#menu-icon,
+#close-icon {
+    margin-left: auto;
+    flex-basis: 50%;
+    text-align: right;
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+#close-icon {
+    display:none;   
+}
+
+.navexpanded #close-icon {
+    display:inline-block;
+}
+
+.navexpanded #menu-icon {
+    display:none;
+}
+
+#logo a:hover,
+#menu-icon a:hover,
+#close-icon a:hover {
+    background: none;
+}
+
+/* Styling for the product */
+.product   {
+    padding: 10px;
+}
+
+.product img, p {
+    margin: 50px 0;
+}
+
+.product h3 {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* Styling for the Sections */
+section {
+    display: grid;
+    min-height: calc(100vh - var(--section-padding-top));
+    padding-top: var(--section-padding-top);
+    grid-template-columns: 5% 1fr 5%;
+    align-content: start;
+}
+
+section > * {
+    grid-column: 2;
+}
+
+/* Styling the Sections */
+.two-columns {
+    display: grid;
+    grid-template-columns:1fr;
+    grid-gap:2rem;
+    margin-bottom:2rem;
+}
+
+/* Styling for the Introduction */
+#introduction {
+    align-content: center;
+    height: 100vh;
+    padding-top:0;
+}
+
+
+.featured {
+    grid-column: 1/-1; /*This Class can be used to stretch an item the entire width of the parent grid */
+    
+}
+
+/* Styling for the Portfolio Section */
+#portfolio a:hover h3, 
+#portfolio a:hover p {
+    padding-left:var(--horizontal-shift);
+}
+
+/* Styling for the About */
+#about ul {
+    list-style: none;
+}
+
+/*Styling the Contact section */
+#contact {
+    min-height:auto;
+}
+
+#contact ul li a:hover {
+    color: cyan;
+}
+
+.btn:hover {
+    background-color: cyan;
+    color: var(--black);
+    padding-left: calc(32px + var(--horizontal-shift));
+}
+#contact ul {
+    display: flex;
+    list-style-type: none;
+    margin-bottom:1rem;
+}
+
+#contact ul li a {
+    text-decoration: none;
+    color: var(--accent-colour);
+    margin: 0 20px 0 0;
+    font-size: 32px;
+}
+
+#contact ul li a:hover {
+    text-decoration: none;
+    color: var(--mid-grey);
+}
+
+/* Styling to invert the colour scheme. Add this class to a section */ 
+.inverted-colours {
+    background:var(--black);
+    color:var(--white);
+}
+
+.inverted-colours a {
+    color:var(--white);
+}
+
+.inverted-colours a:visited {
+    color:var(--white);
+}
+
+.inverted-colours .btn {
+    color:var(--black);
+    background:var(--white);
+}
+
+.inverted-colours .btn:hover {
+    color:var(--black);
+    background:var(--accent-colour);
+}
+
+/* Small devices (i.e. tablets in portrait) */
+@media (min-width: 600px) {
+
+    nav {
+        height: auto;
+
+    }
+
+    .navexpanded #close-icon {
+        display:none;
+    }
+
+    .navexpanded {
+        height: 60px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+    nav ul > li {
+        flex-basis: auto;
+    }
+
+    #logo {
+        flex-basis: auto;
+    }
+    #menu-icon {
+        display: none;
+    }    
+
+
+    
+
+}
+
+/* Medium devices (i.e. tablets in landscape */
+@media (min-width: 900px) {
+
+    section {
+        grid-template-columns: 15% 1fr 15%;
+    }
+
+    .two-columns {
+        grid-template-columns:1fr 1fr;
+    }
+           
+
+}
+
+/* Large devices (i.e. desktop) */
+
+@media (min-width: 1200px) {
+
+
+}
+
+/* X-Large devices (i.e. big desktop) */
+
+@media (min-width: 1800px) {
+
+    
+}
